@@ -1,0 +1,40 @@
+body {
+    background-color: #2f4f4f;
+}
+
+.container {
+    padding-top: 150px;
+}
+
+form {
+    border-radius: 0.5em;
+    background-color: white;
+}
+
+form h1 {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.form-group {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.input-group {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#results h3 {
+    display: none;
+    text-align: center;
+}
+
+#spinner {
+    display: none;
+    text-align: center;
+}
