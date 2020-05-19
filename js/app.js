@@ -1,6 +1,5 @@
 const form = document.getElementById('tipForm');
 
-
 form.addEventListener('submit', spinner)
 
 function spinner(e) {
@@ -11,7 +10,6 @@ function spinner(e) {
 
     e.preventDefault();
 };
-
 
 function calculateTip() {
     //INPUTS
@@ -27,16 +25,15 @@ function calculateTip() {
     let total = amount + tipCalc;
 
     //OUTPUTS
-    const tipTotalEL = document.getElementById('tipTotal');
-    const totalAmountEL = document.getElementById('totalAmount'); 
+    const tipTotalUI = document.getElementById('tipTotal');
+    const totalAmountUI = document.getElementById('totalAmount'); 
 
     //BIND CALCS TO OUTPUTS
-    tipTotalEL.value = tipCalc.toFixed(2);
-    totalAmountEL.value = total.toFixed(2);
+    tipTotalUI.value = tipCalc.toFixed(2);
+    totalAmountUI.value = total.toFixed(2);
 
     document.getElementById('results').style.display = 'block';
     document.getElementById('spinner').style.display = 'none';
-
 };
 
 
