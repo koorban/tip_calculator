@@ -13,24 +13,29 @@ function spinner(e) {
 
 function calculateTip() {
     //INPUTS
-    const amountUI = document.getElementById('tipAmount');
-    const percentageUI = document.getElementById('tipPercentage');
+    const amountUI = document.getElementById('amount');
+    const tipPercentageUI = document.getElementById('tip-percentage');
+    const taxPercentageUI = document.getElementById('sales-tax');
     
     //CONVERSION
-    const amount = parseFloat(amountUI.value);
-    const percentage = parseFloat(percentageUI.value)/100;
+    const billAmount = parseFloat(amountUI.value);
+    const tipPercentage = parseFloat(tipPercentageUI.value)/100;
+    const taxPercentage = parseFloat(taxPercentageUI.value)/100;
 
     //CALCS
-    let tipCalc = amount * percentage;
-    let total = amount + tipCalc;
-
+    let tipTotal = billAmount * tipPercentage;
+    let taxTotal = billAmount * taxPercentage;
+    let totalAmount = billAmount + tipTotal + taxTotal;
+    
     //OUTPUTS
-    const tipTotalUI = document.getElementById('tipTotal');
-    const totalAmountUI = document.getElementById('totalAmount'); 
+    const tipTotalUI = document.getElementById('tip-total');
+    const totalAmountUI = document.getElementById('amount-total'); 
+    const taxTotalUI = document.getElementById('tax-total');
 
-    //BIND CALCS TO OUTPUTS
-    tipTotalUI.value = tipCalc.toFixed(2);
-    totalAmountUI.value = total.toFixed(2);
+    //BIND CALCULATIONS TO OUTPUTS
+    tipTotalUI.value = tipTotal.toFixed(2);
+    totalAmountUI.value = totalAmount.toFixed(2);
+    taxTotalUI.value = taxTotal.toFixed(2);
 
     document.getElementById('results').style.display = 'block';
     document.getElementById('spinner').style.display = 'none';
