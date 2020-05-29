@@ -22,7 +22,7 @@ function calculateTip() {
     const tipPercentage = parseFloat(tipPercentageUI.value)/100;
     const taxPercentage = parseFloat(taxPercentageUI.value)/100;
 
-    //CALCS
+    //CALCULATIONS
     let tipTotal = billAmount * tipPercentage;
     let taxTotal = billAmount * taxPercentage;
     let totalAmount = billAmount + tipTotal + taxTotal;
